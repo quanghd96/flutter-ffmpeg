@@ -45,7 +45,9 @@ static NSString *const EVENT_EXECUTE = @"FlutterFFmpegExecuteCallback";
     NSMutableDictionary *eventDictionary = [[NSMutableDictionary alloc] init];
     eventDictionary[EVENT_EXECUTE] = executeDictionary;
 
-//     _eventSink(eventDictionary);
+    if(_eventSink){
+        _eventSink(eventDictionary);
+    }
 }
 
 @end
